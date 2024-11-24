@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NuperSITE Lite</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Lexend", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #1d1d1d;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .header {
+        width: 100%;
+        background-color: #3a3a3a;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+      }
+
+      .header-logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .header-logo img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+      }
+
+      .header-logo span {
+        font-size: 1.2em;
+      }
+
+      .header-links {
+        display: flex;
+        gap: 20px;
+      }
+
+      .header-links a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1.1em;
+      }
+
+      .content {
+        text-align: center;
+        padding: 0 10px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 1.8em;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      p {
+        font-size: 1em;
+        margin: 5px 0 20px;
+      }
+
+      .news-box {
+        background-color: #2a2a2a;
+        padding: 15px;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 300px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .news-box h2 {
+        font-size: 1.2em;
+        margin: 0 0 10px;
+      }
+
+      .news-text {
+        font-size: 1em;
+        margin: 5px 0;
+      }
+
+      .nav-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .nav-buttons button {
+        background-color: #3a3a3a;
+        color: #ffffff;
+        border: none;
+        padding: 5px 0;
+        font-size: 1.2em;
+        cursor: pointer;
+        border-radius: 5px;
+        width: 50%;
+      }
+
+      .nav-buttons button:hover {
+        background-color: #4a4a4a;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-logo">
+        <img src="images/icon.jpeg" alt="Logo" />
+        <span>NuperSITE</span>
+      </div>
+      <div class="header-links">
+        <a href="#">Home</a>
+        <a href="stuff.html">Stuff</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <h1>Hello!</h1>
+      <p>
+        Welcome to the LITE version of NuperSITE! Built for low-end devices and
+        for people who are on Chromebooks.
+      </p>
+      <p>
+        While the LITE version isnt completed yet, some might be changed around
+        the website.
+      </p>
+
+      <div class="news-box">
+        <h2>News:</h2>
+        <div class="news-text" id="news-text">
+          Welcome to NuperSITE LITE! Stay tuned for updates.
+        </div>
+        <div class="nav-buttons">
+          <button onclick="prevNews()">&#60;</button>
+          <button onclick="nextNews()">&#62;</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const newsItems = [
+        "Welcome to NuperSITE LITE! Stay tuned for updates.",
+        "NuperSITE LITE is still in beta.",
+        "Contact us for support.",
+        "Visit our offical website for a more personalized experience.",
+      ];
+
+      let currentIndex = 0;
+
+      function updateNews() {
+        document.getElementById("news-text").innerHTML =
+          newsItems[currentIndex];
+      }
+
+      function prevNews() {
+        currentIndex =
+          currentIndex === 0 ? newsItems.length - 1 : currentIndex - 1;
+        updateNews();
+      }
+
+      function nextNews() {
+        currentIndex =
+          currentIndex === newsItems.length - 1 ? 0 : currentIndex + 1;
+        updateNews();
+      }
+
+      updateNews();
+    </script>
+  </body>
+</html>

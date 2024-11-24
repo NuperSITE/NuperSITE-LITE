@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NuperSITE Lite</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Lexend", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #1d1d1d;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; /* Changed to flex-start to allow for scrolling */
+        height: auto; /* Changed to auto to accommodate content height */
+        overflow-y: auto; /* Allow vertical scrolling */
+      }
+
+      .header {
+        width: 100%;
+        background-color: #3a3a3a;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+      }
+
+      .header-logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .header-logo img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+      }
+
+      .header-logo span {
+        font-size: 1.2em;
+      }
+
+      .header-links {
+        display: flex;
+        gap: 20px;
+      }
+
+      .header-links a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1.1em;
+      }
+
+      h1 {
+        font-size: 1.8em;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      p {
+        font-size: 1em;
+        margin: 5px 0 20px;
+      }
+
+      .news-box {
+        background-color: #2a2a2a;
+        padding: 15px;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 300px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .news-box h2 {
+        font-size: 1.2em;
+        margin: 0 0 10px;
+      }
+
+      .news-text {
+        font-size: 1em;
+        margin: 5px 0;
+      }
+
+      .nav-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .nav-buttons button {
+        background-color: #3a3a3a;
+        color: #ffffff;
+        border: none;
+        padding: 5px 0;
+        font-size: 1.2em;
+        cursor: pointer;
+        border-radius: 5px;
+        width: 50%;
+      }
+
+      .nav-buttons button:hover {
+        background-color: #4a4a4a;
+      }
+
+      .content {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin: 10px auto;
+        padding: 15px;
+      }
+
+      .box {
+        background-color: #444;
+        border-radius: 20px;
+        padding: 20px;
+        width: 200px;
+        /* Set a fixed width, or use percentages if you prefer */
+        height: 250px;
+        /* Adjust height as necessary */
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 19px;
+      }
+
+      .box:hover {
+        cursor: url("link.png"), pointer;
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .box .name {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-logo">
+        <img src="images/icon.jpeg" alt="Logo" />
+        <span>NuperSITE</span>
+      </div>
+      <div class="header-links">
+        <a href="index.html">Home</a>
+        <a href="#">Stuff</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <!-- box 1 -->
+      <div class="box" onclick="location.href='mario/mario.html';">
+        <div
+          style="
+            width: 100%;
+            height: 80%;
+            border-radius: 15px 15px 0 0;
+            background-image: url('images/mario.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div class="name">Very Hard Mario</div>
+      </div>
+
+      <!-- box 2 -->
+      <div class="box" onclick="location.href='timeshooter/shoot.html';">
+        <div
+          style="
+            width: 100%;
+            height: 80%;
+            border-radius: 15px 15px 0 0;
+            background-image: url('images/timeshooter.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div class="name">Time Shooter</div>
+      </div>
+
+      <!-- box 3 -->
+      <div class="box" onclick="location.href='monkeymart/monkeys.html';">
+        <div
+          style="
+            width: 100%;
+            height: 80%;
+            border-radius: 15px 15px 0 0;
+            background-image: url('images/monkeymart.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div class="name">Monkey Mart</div>
+      </div>
+
+      <!-- box 4 -->
+      <div class="box" onclick="location.href='funnyshooter/funny.html';">
+        <div
+          style="
+            width: 100%;
+            height: 80%;
+            border-radius: 15px 15px 0 0;
+            background-image: url('images/funnyshooter.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div class="name">Funny Shooter</div>
+      </div>
+
+      <!-- box 5 -->
+      <div class="box" onclick="location.href='slope/slope.html';">
+        <div
+          style="
+            width: 100%;
+            height: 80%;
+            border-radius: 15px 15px 0 0;
+            background-image: url('images/slope.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div class="name">Slope</div>
+      </div>
+
+      <!-- box 6 -->
+      <div class="box" onclick="location.href='zigzag/zig.html';">
+        <div
+          style="
+            width: 100%;
+            height: 80%;
+            border-radius: 15px 15px 0 0;
+            background-image: url('images/zigzag.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div class="name">Zig Zag</div>
+      </div>
+
+      <!-- box 7 -->
+      <div class="box" onclick="location.href='2048/game.html';">
+        <div
+          style="
+            width: 100%;
+            height: 80%;
+            border-radius: 15px 15px 0 0;
+            background-image: url('images/2048.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div class="name">2048</div>
+      </div>
+
+      <!-- box 8 -->
+      <div class="box" onclick="location.href='minecraft/mine.html';">
+        <div
+          style="
+            width: 100%;
+            height: 80%;
+            border-radius: 15px 15px 0 0;
+            background-image: url('images/minecraft.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div class="name">Minecraft</div>
+      </div>
+
+      <!-- box 9 -->
+      <div class="box" onclick="location.href='cookie/cookie.html';">
+        <div
+          style="
+            width: 100%;
+            height: 80%;
+            border-radius: 15px 15px 0 0;
+            background-image: url('images/cookie.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div class="name">Cookie Clicker</div>
+      </div>
+
+      <!-- box 10 -->
+      <div class="box" onclick="location.href='geometry/goofyahh.html';">
+        <div
+          style="
+            width: 100%;
+            height: 80%;
+            border-radius: 15px 15px 0 0;
+            background-image: url('images/geo.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div class="name">Geometry Dash</div>
+      </div>
+
+      <!-- box 11 -->
+      <div class="box" onclick="location.href='sound/sound.html';">
+        <div
+          style="
+            width: 100%;
+            height: 80%;
+            border-radius: 15px 15px 0 0;
+            background-image: url('images/soundboard.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div class="name">Soundboard 2.6.1</div>
+      </div>
+
+      <!-- box 12 -->
+      <div class="box" onclick="location.href='tile/game.html';">
+        <div
+          style="
+            width: 100%;
+            height: 80%;
+            border-radius: 15px 15px 0 0;
+            background-image: url('images/tiles.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div class="name">Memory Tiles</div>
+      </div>
+
+      <!-- box 13 -->
+      <div class="box" onclick="location.href='tombofmask/game.html';">
+        <div
+          style="
+            width: 100%;
+            height: 80%;
+            border-radius: 15px 15px 0 0;
+            background-image: url('images/tombofmask.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div class="name">Tomb of the Mask</div>
+      </div>
+
+      <!-- box 14 -->
+      <div class="box" onclick="location.href='jumper/game.html';">
+        <div
+          style="
+            width: 100%;
+            height: 80%;
+            border-radius: 15px 15px 0 0;
+            background-image: url('images/jumper.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div class="name">Jumper (BETA)</div>
+      </div>
+
+      <!-- box 15 -->
+      <div class="box" onclick="location.href='sandboxels/sand.html';">
+        <div
+          style="
+            width: 100%;
+            height: 80%;
+            border-radius: 15px 15px 0 0;
+            background-image: url('images/sand.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div class="name">Sandboxels</div>
+      </div>
+
+      <!-- box 16 -->
+      <div class="box" onclick="location.href='crossy-road/game.html';">
+        <div
+          style="
+            width: 100%;
+            height: 80%;
+            border-radius: 15px 15px 0 0;
+            background-image: url('images/crossyroad.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div class="name">Crossy Road</div>
+      </div>
+
+      <!-- box 17 -->
+      <div class="box" onclick="location.href='bitlife/game.html';">
+        <div
+          style="
+            width: 100%;
+            height: 80%;
+            border-radius: 15px 15px 0 0;
+            background-image: url('images/bitlife.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div class="name">Bitlife</div>
+      </div>
+
+      <!-- box 18 -->
+      <div class="box" onclick="location.href='ovo/game.html';">
+        <div
+          style="
+            width: 100%;
+            height: 80%;
+            border-radius: 15px 15px 0 0;
+            background-image: url('images/ovo.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div class="name">OvO</div>
+      </div>
+
+      <!-- box 19 -->
+      <div class="box" onclick="location.href='worlds-hardest-game/game.html';">
+        <div
+          style="
+            width: 100%;
+            height: 80%;
+            border-radius: 15px 15px 0 0;
+            background-image: url('images/nonimage.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div class="name">Worlds Hardest Game</div>
+      </div>
+
+      <!-- box 20 happy!! -->
+      <div class="box" onclick="location.href='fnaf/game.html';">
+        <div
+          style="
+            width: 100%;
+            height: 80%;
+            border-radius: 15px 15px 0 0;
+            background-image: url('images/fnaf.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+
+        <div class="name">Fnaf</div>
+      </div>
+      <!-- box 21  -->
+      <div class="box" onclick="location.href='stack/game.html';">
+        <div
+          style="
+            width: 100%;
+            height: 80%;
+            border-radius: 15px 15px 0 0;
+            background-image: url('images/stack.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+
+        <div class="name">Stack</div>
+      </div>
+
+      <div class="box" onclick="location.href='tetris/game.html';">
+        <div
+          style="
+            width: 100%;
+            height: 80%;
+            border-radius: 15px 15px 0 0;
+            background-image: url('images/tetris.jpeg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div class="name">Tetris</div>
+      </div>
+    </div>
+
+    <script></script>
+  </body>
+</html>
